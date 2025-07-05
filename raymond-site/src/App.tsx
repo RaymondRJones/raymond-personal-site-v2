@@ -5,6 +5,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LandingPage from './pages/LandingPage';
 import ContactPage from './pages/ContactPage';
 import CoachingPage from './pages/CoachingPage';
+import SweWorkshopPage from './pages/SweWorkshopPage';
+import SweThankYouPage from './pages/SweThankYouPage';
 
 const theme = createTheme({
   palette: {
@@ -68,6 +70,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/coaching" element={<CoachingPage />} />
+          <Route path="/swe-workshop" element={<SweWorkshopPage />} />
+          <Route path="/swe-thank-you" element={<SweThankYouPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
