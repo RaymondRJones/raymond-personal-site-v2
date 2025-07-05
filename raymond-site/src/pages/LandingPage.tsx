@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardMedia,
@@ -11,9 +10,8 @@ import {
   TextField,
   Avatar,
   Paper,
-  Divider,
 } from '@mui/material';
-import { PlayArrow, Email, Star, Group } from '@mui/icons-material';
+import { Email, Star, Group } from '@mui/icons-material';
 import Navigation from '../components/Navigation';
 
 const LandingPage: React.FC = () => {
@@ -36,8 +34,8 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
       <Box sx={{ pt: 12, pb: 8 }}>
         <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={4}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 2fr' }, gap: 4, alignItems: 'center' }}>
+            <Box>
               <Box sx={{ display: 'flex', justifyContent: 'center', mb: { xs: 4, md: 0 } }}>
                 <Avatar
                   src="/profile_pic.jpg"
@@ -55,9 +53,9 @@ const LandingPage: React.FC = () => {
                   </Typography>
                 </Avatar>
               </Box>
-            </Grid>
+            </Box>
             
-            <Grid item xs={12} md={8}>
+            <Box>
               <Typography
                 variant="h2"
                 gutterBottom
@@ -97,8 +95,8 @@ const LandingPage: React.FC = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Container>
       </Box>
 
@@ -144,7 +142,7 @@ const LandingPage: React.FC = () => {
           </Box>
 
           {/* Additional Videos Row */}
-          <Grid container spacing={3}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 3 }}>
             {[
               {
                 title: 'Tech Interview Tips',
@@ -162,7 +160,7 @@ const LandingPage: React.FC = () => {
                 description: 'How to approach coding problems systematically',
               },
             ].map((video, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Box key={index}>
                 <Card sx={{ bgcolor: 'background.default', border: '1px solid #333', height: '100%' }}>
                   <Box sx={{ position: 'relative', paddingTop: '56.25%' }}>
                     <iframe
@@ -189,9 +187,9 @@ const LandingPage: React.FC = () => {
                     </Typography>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Container>
       </Box>
 
@@ -214,9 +212,9 @@ const LandingPage: React.FC = () => {
             Choose the program that fits your goals and accelerate your software engineering career
           </Typography>
 
-          <Grid container spacing={4}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
             {/* Code With Raymond */}
-            <Grid item xs={12} md={6}>
+            <Box>
               <Card sx={{ 
                 bgcolor: 'background.paper', 
                 height: '100%', 
@@ -281,10 +279,10 @@ const LandingPage: React.FC = () => {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
 
             {/* Tech Accelerator */}
-            <Grid item xs={12} md={6}>
+            <Box>
               <Card sx={{ 
                 bgcolor: 'background.paper', 
                 height: '100%', 
@@ -367,8 +365,8 @@ const LandingPage: React.FC = () => {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Container>
       </Box>
 

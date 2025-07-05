@@ -5,27 +5,23 @@ import {
   Typography,
   Paper,
   Button,
-  Grid,
   Card,
   CardContent,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
   Avatar,
   Chip,
   Alert,
 } from '@mui/material';
 import { 
-  PlayArrow, 
   CheckCircle, 
   Star, 
   TrendingUp, 
   School, 
   Group,
   Timer,
-  AttachMoney,
   EmojiEvents,
   ArrowBack
 } from '@mui/icons-material';
@@ -229,9 +225,9 @@ const CoachingPage: React.FC = () => {
             🚨🚨🚨 <span style={{ color: '#FFD700' }}>4 Things You Get</span> When You Join 🚨🚨🚨
           </Typography>
           
-          <Grid container spacing={4} sx={{ mb: 6 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4, mb: 6 }}>
             {features.map((feature, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Box key={index}>
                 <Card sx={{ 
                   bgcolor: 'background.default', 
                   height: '100%',
@@ -256,9 +252,9 @@ const CoachingPage: React.FC = () => {
                     </Typography>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
 
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Button
@@ -358,9 +354,9 @@ const CoachingPage: React.FC = () => {
             People I've <span style={{ color: '#FFD700' }}>Helped</span>
           </Typography>
           
-          <Grid container spacing={4}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }, gap: 4 }}>
             {testimonials.map((testimonial, index) => (
-              <Grid item xs={12} md={6} lg={4} key={index}>
+              <Box key={index}>
                 <Card sx={{ 
                   bgcolor: 'background.default', 
                   height: '100%',
@@ -407,9 +403,9 @@ const CoachingPage: React.FC = () => {
                     </Typography>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
 
           <Box sx={{ textAlign: 'center', mt: 6 }}>
             <Button
