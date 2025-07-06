@@ -39,7 +39,7 @@ const SweWorkshopPage: React.FC = () => {
 
     try {
       // Replace with your actual MAKE webhook URL
-      const response = await fetch('YOUR_MAKE_WEBHOOK_URL', {
+      const response = await fetch('https://hook.us2.make.com/jvqefq1pgp367pgpvenfbibb0v6olcxd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
