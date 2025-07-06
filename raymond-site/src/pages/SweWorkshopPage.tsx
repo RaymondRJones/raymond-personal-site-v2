@@ -89,23 +89,6 @@ const SweWorkshopPage: React.FC = () => {
       
       <Box sx={{ pt: 12, pb: 8 }}>
         <Container maxWidth="md">
-          {/* Hero Section */}
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography
-              variant="h2"
-              gutterBottom
-              sx={{ color: 'text.primary', mb: 3, fontWeight: 'bold' }}
-            >
-              Land Your Dream <span style={{ color: '#FFD700' }}>SWE Job</span> in 2025
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{ color: 'text.secondary', mb: 6, maxWidth: 700, mx: 'auto', lineHeight: 1.6 }}
-            >
-              Join this exclusive free workshop where I'll reveal the exact strategies 
-              I used to land offers at top tech companies and help others do the same.
-            </Typography>
-          </Box>
 
           {/* Workshop Topics */}
           <Box sx={{ mb: 8 }}>
