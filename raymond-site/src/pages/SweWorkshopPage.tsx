@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import {
   Box,
   Container,
@@ -15,11 +15,43 @@ import { CheckCircle, Code, Build, Description } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const SweWorkshopPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Inject the Meta Pixel script
+    const pixelScript = function(f: any, b: any, e: string, v: string) {
+      let n: any, t: any, s: any;
+      if (f.fbq) return;
+      n = f.fbq = function(...args: any[]) {
+        n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    };
+    
+    pixelScript(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    window.fbq('init', '1074361281266354');
+    window.fbq('track', 'PageView');
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
