@@ -19,30 +19,10 @@ declare global {
 
 const SweThankYouPage: React.FC = () => {
   useEffect(() => {
-    // Inject the Meta Pixel script
-    const pixelScript = function(f: any, b: any, e: string, v: string) {
-      let n: any, t: any, s: any;
-      if (f.fbq) return;
-      n = f.fbq = function(...args: any[]) {
-        n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = true;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = true;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    };
-    
-    pixelScript(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-    window.fbq('init', '1074361281266354');
-    window.fbq('track', 'PageView');
-    window.fbq('track', 'CompleteRegistration');
+    // Track registration event using the global fbq function
+    if (window.fbq) {
+      window.fbq('track', 'CompleteRegistration');
+    }
   }, []);
 
   return (

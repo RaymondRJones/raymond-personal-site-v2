@@ -28,29 +28,10 @@ const SweWorkshopPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Inject the Meta Pixel script
-    const pixelScript = function(f: any, b: any, e: string, v: string) {
-      let n: any, t: any, s: any;
-      if (f.fbq) return;
-      n = f.fbq = function(...args: any[]) {
-        n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = true;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = true;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    };
-    
-    pixelScript(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-    window.fbq('init', '1074361281266354');
-    window.fbq('track', 'PageView');
+    // Track page view using the global fbq function
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -84,6 +65,11 @@ const SweWorkshopPage: React.FC = () => {
       });
 
       if (response.ok) {
+        // Track lead generation event
+        if (window.fbq) {
+          window.fbq('track', 'Lead');
+        }
+        
         // Redirect to thank you page
         navigate('/swe-thank-you');
       } else {
