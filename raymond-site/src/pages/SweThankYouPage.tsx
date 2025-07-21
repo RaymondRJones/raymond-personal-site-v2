@@ -136,6 +136,9 @@ const SweThankYouPage: React.FC = () => {
                       mt: 'auto',
                     }}
                     endIcon={<ArrowForward />}
+                    href="https://www.skool.com/raymond/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Learn More
                   </Button>
@@ -174,7 +177,7 @@ const SweThankYouPage: React.FC = () => {
                   <EmojiEvents sx={{ fontSize: 60, color: 'secondary.main', mb: 3, mx: 'auto' }} />
                   
                   <Typography variant="h4" gutterBottom sx={{ color: 'text.primary' }}>
-                    5-Day Mock Interview Challenge
+                    3-Day Mock Interview Challenge
                   </Typography>
                   <Typography variant="h6" sx={{ color: 'secondary.main', mb: 3, fontWeight: 'bold' }}>
                     Completely Free
@@ -187,7 +190,7 @@ const SweThankYouPage: React.FC = () => {
                   </Typography>
 
                   <Box sx={{ mb: 3 }}>
-                    <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>✓ 5 Days of Mock Interviews</Typography>
+                    <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>✓ 3 Days of Mock Interviews</Typography>
                     <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>✓ Personalized Feedback</Typography>
                     <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>✓ Real Interview Scenarios</Typography>
                     <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>✓ Direct Tips from Ray</Typography>
@@ -206,6 +209,9 @@ const SweThankYouPage: React.FC = () => {
                       mt: 'auto',
                     }}
                     endIcon={<ArrowForward />}
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf0YO5p7IZ8syclD4VXAtsvrv-p69qjOzUVk7p3tMx5KMVZYQ/viewform?usp=header"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Apply Here
                   </Button>
@@ -213,32 +219,6 @@ const SweThankYouPage: React.FC = () => {
               </Card>
             </Box>
           </Box>
-
-          {/* Additional Message */}
-          <Paper
-            sx={{
-              p: 4,
-              bgcolor: 'rgba(255, 215, 0, 0.1)',
-              border: '2px solid #FFD700',
-              borderRadius: 4,
-              textAlign: 'center',
-            }}
-          >
-            <Typography
-              variant="h5"
-              gutterBottom
-              sx={{ color: 'text.primary', mb: 3 }}
-            >
-              🎉 Workshop Details Coming Soon!
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ color: 'text.secondary', lineHeight: 1.6 }}
-            >
-              You'll receive an email with the workshop date, time, and access link within the next 24 hours. 
-              In the meantime, check out the resources above to start accelerating your software engineering career today!
-            </Typography>
-          </Paper>
         </Container>
       </Box>
     </Box>

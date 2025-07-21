@@ -124,7 +124,7 @@ const CoachingPage: React.FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              ❗ Now Open for next 3 people only
+              ❗ Now Open for next 6 people only
             </Alert>
             
             <Typography
@@ -261,7 +261,6 @@ const CoachingPage: React.FC = () => {
               variant="contained"
               color="secondary"
               size="large"
-              onClick={() => setShowApplication(true)}
               sx={{
                 color: 'black',
                 px: 6,
@@ -273,8 +272,11 @@ const CoachingPage: React.FC = () => {
                 },
                 transition: 'transform 0.2s',
               }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0YO5p7IZ8syclD4VXAtsvrv-p69qjOzUVk7p3tMx5KMVZYQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Apply Now - Only 3 Spots Left
+              Apply Now - Only 6 Spots Left
             </Button>
           </Box>
         </Container>
@@ -323,7 +325,6 @@ const CoachingPage: React.FC = () => {
               variant="contained"
               color="secondary"
               size="large"
-              onClick={() => setShowApplication(true)}
               sx={{
                 color: 'black',
                 px: 6,
@@ -335,6 +336,9 @@ const CoachingPage: React.FC = () => {
                 },
                 transition: 'transform 0.2s',
               }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0YO5p7IZ8syclD4VXAtsvrv-p69qjOzUVk7p3tMx5KMVZYQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Apply Now - $4,999/year
             </Button>
@@ -412,7 +416,6 @@ const CoachingPage: React.FC = () => {
               variant="contained"
               color="secondary"
               size="large"
-              onClick={() => setShowApplication(true)}
               sx={{
                 color: 'black',
                 px: 6,
@@ -424,6 +427,9 @@ const CoachingPage: React.FC = () => {
                 },
                 transition: 'transform 0.2s',
               }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0YO5p7IZ8syclD4VXAtsvrv-p69qjOzUVk7p3tMx5KMVZYQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Join Them - Apply Now
             </Button>
@@ -460,7 +466,6 @@ const CoachingPage: React.FC = () => {
               variant="contained"
               color="secondary"
               size="large"
-              onClick={() => setShowApplication(true)}
               sx={{
                 color: 'black',
                 px: 8,
@@ -473,6 +478,9 @@ const CoachingPage: React.FC = () => {
                 },
                 transition: 'transform 0.2s',
               }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0YO5p7IZ8syclD4VXAtsvrv-p69qjOzUVk7p3tMx5KMVZYQ/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Apply Now - Limited Spots Available
             </Button>

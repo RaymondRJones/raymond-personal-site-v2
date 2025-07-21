@@ -7,6 +7,9 @@ import ContactPage from './pages/ContactPage';
 import CoachingPage from './pages/CoachingPage';
 import SweWorkshopPage from './pages/SweWorkshopPage';
 import SweThankYouPage from './pages/SweThankYouPage';
+import SystemDesignRoadmapPage from './pages/SystemDesignRoadmapPage';
+import ResumeDownloadPage from './pages/ResumeDownloadPage';
+import LeetcodeRoadmapPage from './pages/LeetcodeRoadmapPage';
 
 const theme = createTheme({
   palette: {
@@ -72,6 +75,9 @@ function App() {
           <Route path="/coaching" element={<CoachingPage />} />
           <Route path="/swe-workshop" element={<SweWorkshopPage />} />
           <Route path="/swe-thank-you" element={<SweThankYouPage />} />
+          <Route path="/system-design-roadmap" element={<SystemDesignRoadmapPage />} />
+          <Route path="/resume-download" element={<ResumeDownloadPage />} />
+          <Route path="/leetcode-roadmap" element={<LeetcodeRoadmapPage />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -273,6 +273,9 @@ const LandingPage: React.FC = () => {
                         py: 1.5,
                         fontWeight: 'bold',
                       }}
+                      href="https://www.skool.com/raymond/about"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Join Community
                     </Button>
